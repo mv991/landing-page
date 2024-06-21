@@ -13,8 +13,8 @@ export const Section3 = () => {
  
      }
     return (<><div className="lg:w-full w-[97%] mx-auto h-fit flex flex-col">
-        <div className="w-full h-fit relative">
-             <Image src={mainImg} height={900} width={900} alt="img" className="w-full h-auto max-h-[600px] object-cover lg:rounded-xl rounded-md cursor-pointer" onClick={() => {setOpen(true); document.body.style.overflow = "hidden"}}/>  
+        <div className="w-full md:h-[600px] h-[300px] relative">
+             <Image src={mainImg} height={900} width={900} alt="img" className="w-full md:h-[600px] h-[300px] bg-cover max-h-[600px] object-cover lg:rounded-xl rounded-md cursor-pointer" onClick={() => {setOpen(true); document.body.style.overflow = "hidden"}}/>  
              <div className="m-2 absolute left-[10px] top-[50%] bg-white rounded-ful w-[40px] h-[40px] flex items-center justify-center rounded-full" onClick={() => handleImageChange(images[0])}>
              <Image src={"/left-arrow.svg"} width={15} height={20} alt="arrow" className="cursor-pointer " />
              </div>

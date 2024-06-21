@@ -11,11 +11,11 @@ const Section2 = () => {
   return (
     <div className="w-screen min-h-screen bg-white h-fit ">
      
-      <div className="bg-[#F4F9FF] w-full h-[230px] flex lg:justify-center items-center lg:gap-[120px] gap-[100px] lg:p-0 px-8 xl:gap-[180px] overflow-x-scroll ">
-        <Image width={170} height={100} alt="img" src={"/book.png"} className="lg:ml-0 ml-"/>
-        <Image width={170} height={100} alt="img" src={"/payment.png"} />
-        <Image width={140} height={80} alt="img" src={"/handover.png"} />
-        <Image width={170} height={100} alt="img" src={"/area.png"} />
+      <div className="bg-[#F4F9FF] w-full h-[230px] flex md:justify-center items-center lg:gap-[120px] gap-[100px] lg:p-0 px-12 xl:gap-[180px] overflow-x-scroll ">
+        <Image width={100} height={100} alt="img" src={"/book.png"} className="lg:ml-0 w-[120px] h-[120px]"/>
+        <Image width={100} height={100} alt="img" src={"/payment.png"} className=" w-[120px] h-[120px]"/>
+        <Image width={100} height={80} alt="img" src={"/handover.png"} className=" w-[120px] h-[120px]" />
+        <Image width={100} height={100} alt="img" src={"/area.png"} className=" w-[120px] h-[120px]" />
       </div>
        
    <svg width="182" height="79" viewBox="0 0 182 79" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-auto mt-12">
