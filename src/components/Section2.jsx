@@ -11,7 +11,7 @@ const Section2 = () => {
   return (
     <div className="w-screen min-h-screen bg-white h-fit ">
      
-      <div className="bg-[#F4F9FF] w-full h-[230px] flex lg:justify-center items-center lg:gap-[120px] gap-[100px] lg:p-0 px-12 xl:gap-[180px] overflow-x-scroll ">
+      <div className="bg-[#F4F9FF] w-full h-[230px] flex lg:justify-center items-center lg:gap-[120px] gap-[100px] lg:p-0 px-8 xl:gap-[180px] overflow-x-scroll ">
         <Image width={170} height={100} alt="img" src={"/book.png"} className="lg:ml-0 ml-"/>
         <Image width={170} height={100} alt="img" src={"/payment.png"} />
         <Image width={140} height={80} alt="img" src={"/handover.png"} />
