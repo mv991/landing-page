@@ -1,6 +1,7 @@
 import { Oswald } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 const inter = Oswald({ subsets: ["latin"],weight:['200','300','400','500','600','700'] });
 
 export const metadata = {
@@ -14,7 +15,9 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Navbar/>
         {children}
+        <Footer/>
         </body>
+      
     </html>
   );
 }

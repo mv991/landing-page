@@ -1,19 +1,25 @@
-import React from "react";
+'use client'
+import React,{useEffect,useState,useRef} from "react";
 import Image from "next/image";
 import AmenityCard from "./AmenityCard";
+import { Section3 } from "./Section3";
 const Section2 = () => {
+  
+
+
+  
   return (
     <div className="w-screen min-h-screen bg-white h-fit ">
      
-      <div className="bg-[#F4F9FF] w-full h-[230px] flex justify-center items-center md:gap-[150px] gap-[100px] md:p-0 px-12 xl:gap-[180px] overflow-x-scroll ">
-        <Image width={170} height={100} alt="img" src={"/book.png"} />
+      <div className="bg-[#F4F9FF] w-full h-[230px] flex lg:justify-center items-center lg:gap-[120px] gap-[100px] lg:p-0 px-12 xl:gap-[180px] overflow-x-scroll ">
+        <Image width={170} height={100} alt="img" src={"/book.png"} className="lg:ml-0 ml-"/>
         <Image width={170} height={100} alt="img" src={"/payment.png"} />
         <Image width={140} height={80} alt="img" src={"/handover.png"} />
         <Image width={170} height={100} alt="img" src={"/area.png"} />
       </div>
        
    <svg width="182" height="79" viewBox="0 0 182 79" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-auto mt-12">
-<g clip-path="url(#clip0_256_35)">
+<g clipPath="url(#clip0_256_35)">
 <path d="M86.0036 75.9259C85.9864 75.7885 86.0208 75.7026 85.8834 75.6511C85.7117 75.5824 85.4713 75.548 85.2824 75.548C84.5441 75.548 83.823 76.0976 83.823 76.8876C83.823 77.2654 83.9775 77.5746 84.2694 77.815C84.527 78.0554 84.8532 78.1413 85.1966 78.1413C85.4713 78.1413 85.7804 78.0726 86.0207 77.918C86.1066 77.8493 86.0894 77.815 86.0894 77.7119V77.2482C86.0894 77.1967 86.0723 77.0765 86.1238 77.025C86.1581 77.0078 86.2096 77.0078 86.244 76.9906H86.3126C86.347 76.9906 86.3813 76.9906 86.3813 76.9391C86.3813 76.9048 86.347 76.8876 86.3298 76.8876C86.1924 76.8876 86.0551 76.9048 85.9349 76.9048C85.7975 76.9048 85.6602 76.8876 85.5228 76.8876C85.4885 76.8876 85.4198 76.8876 85.4198 76.9391C85.4198 76.9906 85.4885 76.9906 85.5228 76.9906C85.746 76.9906 85.7804 77.025 85.7804 77.2482V77.5746C85.7804 77.6776 85.7804 77.8493 85.7117 77.918C85.5915 78.0039 85.4026 78.0211 85.2653 78.0211C84.9391 78.0211 84.6643 77.9352 84.4411 77.6776C84.2523 77.4372 84.1664 77.1624 84.1664 76.8532C84.1664 76.5785 84.2694 76.235 84.4411 76.0117C84.6472 75.7541 84.9047 75.6511 85.2138 75.6511C85.8834 75.6511 85.8147 76.1663 85.9521 76.1663C85.9864 76.1663 86.0036 76.1319 86.0036 76.0976V75.9259Z" fill="#004572"/>
 <path d="M87.1368 75.9259C87.1368 75.8572 87.1368 75.7713 87.2054 75.7369C87.257 75.7198 87.4287 75.7198 87.4973 75.7198C87.6175 75.7198 87.7892 75.7198 87.9094 75.7541C88.0468 75.7885 88.0983 75.8572 88.1498 75.9945L88.2013 76.0976C88.2185 76.1319 88.2356 76.1835 88.27 76.1835C88.3043 76.1835 88.3043 76.1148 88.3043 76.0976V75.7541C88.3043 75.7026 88.3215 75.5995 88.2528 75.5995C87.9266 75.5995 87.6004 75.6167 87.2741 75.6167C87.0338 75.6167 86.7934 75.5995 86.553 75.5995C86.5187 75.5995 86.4843 75.6339 86.4843 75.6682C86.4843 75.7198 86.553 75.7198 86.5873 75.7198C86.8621 75.7198 86.8449 75.7885 86.8449 76.0461V77.6604C86.8449 77.918 86.8621 77.9867 86.5873 77.9867C86.553 77.9867 86.4843 78.0039 86.4843 78.0382C86.4843 78.0898 86.5187 78.1069 86.553 78.1069C86.6388 78.1069 86.7247 78.0898 86.7934 78.0898H88.2871C88.3215 78.0898 88.3215 78.0898 88.3387 78.0554L88.3902 77.6432C88.3902 77.6089 88.4073 77.5746 88.4073 77.5402C88.4073 77.523 88.3902 77.5059 88.373 77.5059C88.3215 77.5059 88.2871 77.6089 88.2871 77.6432C88.1498 77.9867 87.9437 77.9867 87.6175 77.9867C87.3085 77.9867 87.1368 77.9867 87.1368 77.6261V76.9391C87.1368 76.8017 87.1711 76.8017 87.3256 76.8017C87.4458 76.8017 87.6519 76.8017 87.7892 76.8361C87.8751 76.8532 87.9094 76.9735 87.9266 77.0937C87.9266 77.1109 87.9438 77.1452 87.9781 77.1452C87.9953 77.1452 88.0124 77.1452 88.0124 77.0765C88.0124 76.9563 88.0124 76.8361 87.9953 76.7158C88.0124 76.5956 88.0124 76.4754 88.0124 76.3724C88.0124 76.338 87.9953 76.3208 87.9781 76.3208C87.9438 76.3208 87.9266 76.3724 87.9266 76.3895C87.9094 76.5098 87.8922 76.6643 87.7892 76.6643C87.6519 76.6815 87.4458 76.6815 87.3256 76.6815C87.1711 76.6815 87.1368 76.6815 87.1368 76.4926V75.9259Z" fill="#004572"/>
 <path d="M92.2362 75.9259C92.2362 75.8572 92.2362 75.7713 92.3049 75.7369C92.3736 75.7198 92.5281 75.7198 92.5968 75.7198C92.7341 75.7198 92.8887 75.7198 93.0088 75.7541C93.1462 75.7885 93.1977 75.8572 93.2492 75.9945L93.3179 76.0976C93.3179 76.1319 93.3351 76.1835 93.3694 76.1835C93.4038 76.1835 93.4038 76.1148 93.4038 76.0976V75.7541C93.4038 75.7026 93.4209 75.5995 93.3522 75.5995C93.026 75.5995 92.6998 75.6167 92.3736 75.6167C92.1332 75.6167 91.8928 75.5995 91.6524 75.5995C91.6181 75.5995 91.6009 75.6339 91.6009 75.6682C91.6009 75.7198 91.6524 75.7198 91.6868 75.7198C91.9615 75.7198 91.9443 75.7885 91.9443 76.0461V77.6604C91.9443 77.918 91.9615 77.9867 91.6868 77.9867C91.6524 77.9867 91.6009 78.0039 91.6009 78.0382C91.6009 78.0898 91.6181 78.1069 91.6524 78.1069C91.7383 78.1069 91.8241 78.0898 91.8928 78.0898H93.3866C93.4209 78.0898 93.4209 78.0898 93.4381 78.0554L93.4896 77.6432C93.5068 77.6089 93.5068 77.5746 93.5068 77.5402C93.5068 77.523 93.4896 77.5059 93.4724 77.5059C93.4209 77.5059 93.3866 77.6089 93.3866 77.6432C93.2492 77.9867 93.0432 77.9867 92.717 77.9867C92.4079 77.9867 92.2362 77.9867 92.2362 77.6261V76.9391C92.2362 76.8017 92.2877 76.8017 92.4422 76.8017C92.5453 76.8017 92.7513 76.8017 92.9058 76.8361C92.9745 76.8532 93.0088 76.9735 93.026 77.0937C93.0432 77.1109 93.0432 77.1452 93.0775 77.1452C93.0947 77.1452 93.129 77.1452 93.129 77.0765C93.1119 76.9563 93.1119 76.8361 93.1119 76.7158C93.1119 76.5956 93.1119 76.4754 93.129 76.3724C93.129 76.338 93.0947 76.3208 93.0775 76.3208C93.0432 76.3208 93.0432 76.3724 93.026 76.3895C93.0088 76.5098 92.9917 76.6643 92.9058 76.6643C92.7513 76.6815 92.5453 76.6815 92.4422 76.6815C92.2705 76.6815 92.2362 76.6815 92.2362 76.4926V75.9259Z" fill="#004572"/>
@@ -57,21 +63,27 @@ const Section2 = () => {
 </clipPath>
 </defs>
    </svg>
-   <div className="h-fit lg:w-[80%]  w-full mx-auto">
+   <div className="h-fit lg:w-[95%] lg:max-w-[1200px]  w-full mx-auto">
       <p className="mx-auto text-center font-oswald text-3xl font-semibold text-[#004572] mt-6 mb-3">FEATURES & AMENITIES</p>
-      <p className="text-center md:w-[700px] w-[80%] mx-auto">
+      <p className="text-center font-[400] md:w-[700px] w-[80%] mx-auto tracking-[1.5px]">
         Harbour Lights beautifully honours maritime voyages while embracing an
         opulent seafront lifestyle. Its maritime-inspired amenities provide an
         unmatched seaside experience, offering a life of tranquility and bliss.
       </p>
-      <div className=" lg:max-w-[1170px] md:max-w-[500px] sm:max-w-[500px] mx-auto  grid lg:grid-cols-4 auto-cols-min sm:grid-cols-2 grid-cols-1  justify-items-center">
+      <div className="mt-12 lg:max-w-full  md:max-w-[570px] sm:max-w-[560px] mx-auto  grid lg:grid-cols-4  sm:grid-cols-2 grid-cols-1 gap-y-6   justify-items-center" >
         <AmenityCard img={"/Group 133.png"} p={"pools"} text={"Floating"} />
-        <AmenityCard img={"/Group 134.png"} p={"pools"} text={"Floating"} />
-        <AmenityCard img={"/Group 135.png"} p={"pools"} text={"Floating"} />
-        <AmenityCard img={"/Group 136.png"} p={"pools"} text={"Floating"} />
+        <AmenityCard img={"/Group 134.png"} p={"Like Rooms"} text={"Spacious Cabins"} />
+        <AmenityCard img={"/Group 135.png"} p={"Swimming Pools"} text={"Sea Facing"} />
+        <AmenityCard img={"/Group 136.png"} p={"& Fitness"} text={"Gymnasium"} />
       </div>
-      <p className="text-[#686868] text-xs my-3 font-[200] mx-auto lg:mx-0 lg:ml-auto 2xl:mr-[6%] xl:mr-[4%] lg:mr-[1%] w-fit">*T&Cs apply | ** Based on similar branded projects in the last 2 years. Source 1 | Source 2</p>
+      <p className="text-[#686868] text-xs my-12 font-[200] mx-auto lg:ml-auto xl:mr-[4%] max-w-[80%] text-center  w-fit">*T&Cs apply | ** Based on similar branded projects in the last 2 years. <span className="underline">Source 1</span> |<span className="underline"> Source 2</span></p>
+      <div className="flex lg:mr-[4%] lg:justify-end justify-center mb-8">
+      <button className="px-10 py-4 text-white font-[400] text-[16px] tracking-[2px] bg-[#00357B] rounded-md lg:ml-auto  w-fit hover:bg-[#002049] ">EXTERIORS</button>
+      <button className="px-10 py-4 text-[#00357B] font-[700] text-[16px] tracking-[2px] sm:ml-4 ml-2 bg-white border-[1.8px] border-[#00357B] rounded-md hover:bg-[#002049] hover:text-white hover:border-none">INTERIORS</button>
+      </div>
+      <Section3/>
     </div>
+
     </div>
   );
 };

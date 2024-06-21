@@ -1,8 +1,30 @@
-import React from "react";
+'use client'
+import React, { useEffect,useState } from "react";
 
 const Navbar = () => {
+  const [navColor, setNavColor] = useState('transparent');
+  useEffect(() => {
+    const handleScroll = () => {
+    
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition >= 100) {
+        setNavColor('#091D41'); // Change to your desired color
+      } else {
+      
+        setNavColor('transparent'); // Change back to the initial color
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <div className="w-full h-[100px] fixed sm:p-12 p-8 flex justify-between items-center">
+    <div className="w-screen h-[100px] flex justify-center z-[2] fixed" style={{ backgroundColor: navColor, transition: 'background-color 0.3s ease' }} id="navbar">
+    <div className="lg:w-[80%] w-[90%] h-[100px]   max-w-[1300px]  flex justify-between items-center relative z-[3]" >
       <svg
         height="22"
         viewBox="0 0 166 22"
@@ -15,7 +37,7 @@ const Navbar = () => {
           fill="#F5F5F5"
         />
       </svg>
-      <button className=" outline outline-2 flex items-center  h-[45px] py-3 px-8 text-sm font-bold rounded-md sm:block hidden text-[#17ABFF]">
+      <button className={` flex items-center  h-[45px] py-3 px-8 text-sm font-bold rounded-md sm:block hidden ${navColor==="transparent"?"outline outline-2 text-[#17ABFF] hover:bg-[#17ABFF] hover:text-white":"text-white outline outline-2 hover:bg-white hover:text-[#091D41]"}  `}>
         ENQUIRE NOW
       </button>
 
@@ -31,6 +53,7 @@ const Navbar = () => {
         <rect x="3" y="5.09741" width="21" height="2" rx="1" fill="white" />
         <rect x="3" y="10.0974" width="21" height="2" rx="1" fill="white" />
       </svg>
+    </div>
     </div>
   );
 };
