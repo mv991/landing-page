@@ -23,7 +23,7 @@ export const Section3 = () => {
              </div>
         </div>
         <div className="flex w-full max-w-full justify-between mt-4">
-            {images.map((img,index) => <Image src={img} width={1200} height={1200} alt="img" className="w-[24%] sm:rounded-2xl rounded-md bg-cover cursor-pointer" onClick={() => {handleImageChange(img)}} key={index}></Image>)}
+            {images.map((img,index) => <Image src={img} width={900} height={900} alt="img" className="w-[24%] sm:rounded-2xl rounded-md bg-cover cursor-pointer" onClick={() => {handleImageChange(img)}} key={index}></Image>)}
 
         </div>
 

@@ -26,7 +26,7 @@ export default function LightHouse({img,open,setOpen}) {
     return(<>
 
     <div className="fixed top-0 left-0 h-screen w-screen backdrop flex justify-center items-center z-[7]">
-              <Image src={img} alt="main-img" width={1000} height={1000} className="w-auto h-auto max-w-[90%] max-h-[90%]"   ref={modalWrapperRef}/>
+              <Image src={img} alt="main-img" width={700} height={700} className="w-auto h-auto max-w-[90%] max-h-[90%]"   ref={modalWrapperRef}/>
     </div>
 
     </>)
